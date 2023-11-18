@@ -1,9 +1,9 @@
 # NM-LICET-GROUP09
-Team members : 
+<b>Team members : <br></b>
 1.Meenakshi Sundaram C <br>
 2.Vaishnavi O <br>
 3.Arivazhagan <br>
 
-Topic : Stock Inventory Application
+<b>Topic :</b> Stock Inventory Application
 
               
