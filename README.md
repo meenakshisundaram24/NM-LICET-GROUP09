@@ -6,5 +6,5 @@
 
 <b>Topic :</b> Stock Inventory Application
 
-<h2>Test link : https://github.com/meenakshisundaram24/NM-LICET-GROUP09/upload/main/milestone3-react_frontend</h2>
+<h4>Live Test Link : https://stockinventory-43as3frsy-meenakshis-projects-56fb0047.vercel.app/</h4>
               
