@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.codewitharjun.fullstackbackend.FullstackBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.964 s - in com.codewitharjun.fullstackbackend.FullstackBackendApplicationTests
