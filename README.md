@@ -8,7 +8,7 @@
 
 <h4>Live Test Link : https://stockim.vercel.app/</h4><br>
 
-This application is developed using React JS for Frontend and Spring boot for the Backend. The Inventory details are stored using database and the inventory details are fetched at real time. Also options for Adding a new stock , Updating a stock and deleting the stock are provided. 
+This application is developed using React JS for Frontend and Spring boot for the Backend. The Inventory details are stored in database and are fetched at real time. Options for Adding a new stock , Updating a stock and deleting the stock are provided.Once an operation is operated it is refelected in the Inventory. 
 
 <h4>Output Screenshots</h4>
 <img src="output/op1.jpg">
