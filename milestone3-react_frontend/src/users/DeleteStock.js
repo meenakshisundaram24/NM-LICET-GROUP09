@@ -7,7 +7,6 @@ export default function DeleteStock() {
 
   const { id } = useParams();
 
-  const {} = user;
   const [user, setUser] = useState({
     id:"",
   });
