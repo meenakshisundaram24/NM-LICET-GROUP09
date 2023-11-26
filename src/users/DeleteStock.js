@@ -2,18 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-export default function EditUser() {
+export default function DeleteStock() {
   let navigate = useNavigate();
 
   const { id } = useParams();
 
+  const {} = user;
   const [user, setUser] = useState({
-    quantity: "",
-    price: "",
+    id:"",
   });
-
-  const { quantity,price } = user;
-
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -24,7 +21,7 @@ export default function EditUser() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/v1/user/${id}`, user);
+    await axios.delete(`http://localhost:8080/v1/user/${id}`);
     navigate("/");
   };
 
@@ -37,7 +34,7 @@ export default function EditUser() {
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Edit Stock</h2>
+          <h2 className="text-center m-4">Delete Stock</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
           <div className="mb-3">
@@ -52,33 +49,9 @@ export default function EditUser() {
                 onChange={(e) => onInputChange(e)}
               />
             </div>
-            <div className="mb-3">
-              <label htmlFor="Name" className="form-label">
-                Quantity
-              </label>
-              <input
-                type={"number"}
-                className="form-control"
-                name="quantity"
-                value={quantity}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="Username" className="form-label">
-                Price
-              </label>
-              <input
-                type={"number"}
-                className="form-control"
-                name="price"
-                value={price}
-                onChange={(e) => onInputChange(e)}
-              />
-            </div>
             
             <button type="submit" className="btn btn-outline-primary">
-              Edit
+              Delete
             </button>
             <Link className="btn btn-outline-danger mx-2" to="/">
               Cancel

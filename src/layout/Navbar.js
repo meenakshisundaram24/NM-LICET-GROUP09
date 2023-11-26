@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Full Stack Application
+            Stock Inventory Management
           </Link>
           <button
             className="navbar-toggler"
@@ -20,10 +20,21 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
+          <div>
+          <Link className="btn btn-outline-light" to="/">
+            Inventory
+          </Link>&nbsp;&nbsp;
           <Link className="btn btn-outline-light" to="/adduser">
-            Add User
-          </Link>
+            Add Stock
+          </Link>&nbsp;&nbsp;
+          <Link className="btn btn-outline-light" to="/edituser/:id">
+            Update Stock
+          </Link>&nbsp;&nbsp;
+          <Link className="btn btn-outline-light" to="/deleteuser/:id">
+            Delete Stock
+          </Link>&nbsp;&nbsp;
+          </div>
+
         </div>
       </nav>
     </div>

@@ -4,9 +4,11 @@ import { Link, useParams } from "react-router-dom";
 
 export default function ViewUser() {
   const [user, setUser] = useState({
+    id: "",
     name: "",
-    username: "",
-    email: "",
+    brand: "",
+    quantity:"",
+    price:""
   });
 
   const { id } = useParams();
@@ -16,7 +18,7 @@ export default function ViewUser() {
   }, []);
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
+    const result = await axios.get(`http://localhost:8080/v1/user/${id}`);
     setUser(result.data);
   };
 
@@ -24,7 +26,7 @@ export default function ViewUser() {
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">User Details</h2>
+          <h2 className="text-center m-4">Current I</h2>
 
           <div className="card">
             <div className="card-header">

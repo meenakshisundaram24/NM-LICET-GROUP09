@@ -12,13 +12,8 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/users");
+    const result = await axios.get("http://localhost:8080/v1/users");
     setUsers(result.data);
-  };
-
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
-    loadUsers();
   };
 
   return (
@@ -27,42 +22,50 @@ export default function Home() {
         <table className="table border shadow">
           <thead>
             <tr>
-              <th scope="col">S.N</th>
-              <th scope="col">Name</th>
-              <th scope="col">Username</th>
-              <th scope="col">Email</th>
-              <th scope="col">Action</th>
+              <th scope="col">ID</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
             </tr>
           </thead>
           <tbody>
+            <tr>
+                <th scope="row">1101</th>
+                <td>Asus Rog 5</td>
+                <td>Asus</td>
+                <td>10</td>
+                <td>$ 12000</td>
+              </tr>
+              <tr>
+                <th scope="row">1102</th>
+                <td>Lenova Idepad</td>
+                <td>Lenova</td>
+                <td>7</td>
+                <td>$ 13000</td>
+              </tr>
+              <tr>
+                <th scope="row">1103</th>
+                <td>HP thinkpad series</td>
+                <td>HP</td>
+                <td>15</td>
+                <td>$ 17000</td>
+              </tr>
+              <tr>
+                <th scope="row">1104</th>
+                <td>Asus gaming laptop</td>
+                <td>Asus</td>
+                <td>4</td>
+                <td>$ 20000</td>
+              </tr>
+
             {users.map((user, index) => (
               <tr>
-                <th scope="row" key={index}>
-                  {index + 1}
-                </th>
+                <th scope="row">{user.id}</th>
                 <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>
-                  <Link
-                    className="btn btn-primary mx-2"
-                    to={`/viewuser/${user.id}`}
-                  >
-                    View
-                  </Link>
-                  <Link
-                    className="btn btn-outline-primary mx-2"
-                    to={`/edituser/${user.id}`}
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    className="btn btn-danger mx-2"
-                    onClick={() => deleteUser(user.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+                <td>{user.brand}</td>
+                <td>{user.quantity}</td>
+                <td>$ {user.price}</td>
               </tr>
             ))}
           </tbody>
