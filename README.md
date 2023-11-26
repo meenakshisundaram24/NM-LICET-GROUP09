@@ -6,5 +6,5 @@
 
 <b>Topic :</b> Stock Inventory Application
 
-<h4>Live Test Link : https://stockinventory.vercel.app/</h4>
+<h4>Live Test Link : https://stockim.vercel.app/</h4>
               
